@@ -1,6 +1,16 @@
-$(".button1").on("click", function() {
-    $("#slide2").show() 
-    // $("#slide1").hide()
-});
+$(document).ready(function (){
 
-// $("#slide2").hide()
+    $(".button1").on("click", function() {
+        $("#slide2").show() 
+        // $("#slide1").hide()
+    });
+    
+    // $("#slide2").hide()
+    
+    
+    function getDocotorInfo(){
+        
+}
+    
+    
+    });
