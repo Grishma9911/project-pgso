@@ -2,7 +2,7 @@
     background-image: url(https://www.eahsn.org/wp-content/uploads/AdobeStock_65704515.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 500px;
+    height: 400px;
     text-shadow: black 0.3em 0.3em 0.3em;
 
 }
@@ -13,3 +13,20 @@ p {
 
 h1 {
     font-size: 100px;
+}
+
+.jumbotron2 {
+    height: 300px;
+    background-image: url(https://www.eahsn.org/wp-content/uploads/AdobeStock_65704515.jpeg);
+    text-shadow: black 0.3em 0.3em 0.3em;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron3 {
+    height: 300px;
+    background-image: url(https://www.eahsn.org/wp-content/uploads/AdobeStock_65704515.jpeg);
+    text-shadow: black 0.3em 0.3em 0.3em;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
