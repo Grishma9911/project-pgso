@@ -1,0 +1,15 @@
+.jumbotron {
+    background-image: url(https://www.eahsn.org/wp-content/uploads/AdobeStock_65704515.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    text-shadow: black 0.3em 0.3em 0.3em;
+
+}
+
+p {
+    font-size: xx-large;
+}
+
+h1 {
+    font-size: 100px;
