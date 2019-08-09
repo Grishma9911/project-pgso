@@ -1,17 +1,13 @@
-body {
-    margin: 10px;
-    padding: 5px;
-}
-.jumbotron {
+/* .jumbotron {
     background-image: url(https://www.eahsn.org/wp-content/uploads/AdobeStock_65704515.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
     text-shadow: black 0.3em 0.3em 0.3em;
-    font: 100px;
+    font: 100px; */
     /* margin: 10px;
     padding: 5px; */
-
+/* 
 }
 
 
@@ -29,15 +25,15 @@ body {
     text-shadow: black 0.3em 0.3em 0.3em;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 /* 
 #slide3 {
     background-image: url(https://image.freepik.com/free-vector/medical-crosses-background_23-2147490186.jpg); */
-/* } */
+    /* } */
 
-.nam {
-    text-align: center; 
-
+    /* .nam {
+        text-align: center; 
+        
 }
 
 
@@ -51,23 +47,23 @@ body {
 textarea {
     text-align: center;
     }
-
-.zippy {
-    padding: 20px 20px 20px 5px;
-    margin: 30px auto;
-    background-color:  rgb(176, 209, 223);
-    width: 700px;
-}
-
-#btn-info {
-    box-align: center;
-    width: 150px;
-    border-radius: 30px;
-}
-
-#search {
-    padding: 5px;
-    margin: auto;
+    
+    .zippy {
+        padding: 20px 20px 20px 5px;
+        margin: 30px auto;
+        background-color:  rgb(176, 209, 223);
+        width: 700px;
+    }
+    
+    #btn-info {
+        box-align: center;
+        width: 150px;
+        border-radius: 30px;
+    }
+    
+    #search {
+        padding: 5px;
+        margin: auto;
     width: 900px;
 }
 
@@ -75,4 +71,324 @@ textarea {
     padding: 5px;
     margin: auto;
     width: 900px;
+}   */
+
+/* 
+.hexagon {
+    position: relative;
+    width: 300px; 
+    height: 173.21px;
+    background-color: #64C7CC;
+    margin: 86.60px 0;
+  }
+  
+  .hexagon:before,
+  .hexagon:after {
+      content: "";
+      position: absolute;
+    width: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
 }
+  
+.hexagon:before {
+    bottom: 100%;
+    border-bottom: 86.60px solid #64C7CC;
+  }
+  
+  .hexagon:after {
+      top: 100%;
+    width: 0;
+    border-top: 86.60px solid #64C7CC;
+  }
+  
+  .hexagon {
+      float: left;
+      margin-right: -26px;
+      margin-bottom: -50px;
+    }
+    .hexagon .left {
+        float: left;
+        width: 0;
+        border-right: 30px solid #6C6;
+        border-top: 52px solid transparent;
+        border-bottom: 52px solid transparent;
+    }
+    .hexagon .middle {
+    float: left;
+    width: 60px;
+    height: 104px;
+    background: #6C6;
+}
+.hexagon .right {
+    float: left;
+    width: 0;
+    border-left: 30px solid #6C6;
+    border-top: 52px solid transparent;
+    border-bottom: 52px solid transparent;
+}
+.hexagon-row {
+    clear: left;
+}
+.hexa.even {
+    margin-top: 53px;
+} */
+
+
+body {
+    margin: 500px;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 255, 255, 0.021);
+}
+
+/* h2 #toothache {
+    color: rgb(54, 111, 116);
+    text-align: left;
+    margin: 30px;
+}
+
+h2 #joints {
+    color: rgb(54, 111, 116);
+    text-align: left;
+    margin: 50px;
+} */
+ 
+.hex1 {
+    margin: 50px 0px;
+} 
+
+.hex1,
+.hex1::after,
+.hex1::before {
+    border-color: rgb(54, 111, 116);
+    border-width: 5px;
+    border-style: solid;
+    border-top: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    
+    height: 100px;
+    width: 173.5px; 
+
+    -webkit-transition: all .45s ease;
+    -moz-transition: all .45s ease;
+    -ms-transition: all .45s ease;
+    -o-transition: all .45s ease;
+    transition: all .45s ease;
+}
+
+.hex1:hover,
+.hex1:hover::after,
+.hex1:hover::before{
+    background: rgb(54, 111, 116);
+}
+
+.hex1::after,
+.hex1::before {
+    content: "";
+    position: absolute;
+    top: 10;
+    left: 48.5px;
+    z-index: -1;
+}
+
+.hex1::after {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.hex1::before {
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+
+.hex2 {
+    margin: 50px 0px;
+} 
+
+.hex2,
+.hex2::after,
+.hex2::before {
+    border-color: rgb(54, 111, 116);
+    border-width: 5px;
+    border-style: solid;
+    border-top: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    
+    height: 100px;
+    width: 173.5px; 
+
+    -webkit-transition: all .45s ease;
+    -moz-transition: all .45s ease;
+    -ms-transition: all .45s ease;
+    -o-transition: all .45s ease;
+    transition: all .45s ease;
+}
+
+.hex2:hover,
+.hex2:hover::after,
+.hex2:hover::before{
+    background: rgb(54, 111, 116);
+}
+
+.hex2::after,
+.hex2::before {
+    content: "";
+    position: absolute;
+    top: 10;
+    left: 48.5px;
+    z-index: -1;
+}
+
+.hex2::after {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.hex2::before {
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+
+.hex3 {
+    margin: 50px 0px;
+} 
+
+.hex3,
+.hex3::after,
+.hex3::before {
+    border-color: rgb(54, 111, 116);
+    border-width: 5px;
+    border-style: solid;
+    border-top: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    
+    height: 100px;
+    width: 173.5px; 
+
+    -webkit-transition: all .45s ease;
+    -moz-transition: all .45s ease;
+    -ms-transition: all .45s ease;
+    -o-transition: all .45s ease;
+    transition: all .45s ease;
+}
+
+.hex3:hover,
+.hex3:hover::after,
+.hex3:hover::before{
+    background: rgb(54, 111, 116);
+}
+
+.hex3::after,
+.hex3::before {
+    content: "";
+    position: absolute;
+    top: 10;
+    left: 48.5px;
+    z-index: -1;
+}
+
+.hex3::after {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.hex3::before {
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+
+
+.hex4 {
+    margin: 50px 0px;
+    float: right;
+    top: 100px;
+    left: 20px;
+} 
+
+.hex4,
+.hex4::after,
+.hex4::before {
+    border-color: rgb(54, 111, 116);
+    border-width: 5px;
+    border-style: solid;
+    border-top: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    
+    height: 100px;
+    width: 173.5px; 
+
+    -webkit-transition: all .45s ease;
+    -moz-transition: all .45s ease;
+    -ms-transition: all .45s ease;
+    -o-transition: all .45s ease;
+    transition: all .45s ease;
+}
+
+.hex4:hover,
+.hex4:hover::after,
+.hex4:hover::before{
+    background: rgb(54, 111, 116);
+}
+
+.hex4::after,
+.hex4::before {
+    content: "";
+    position: absolute;
+    top: 100;
+    right: 48.5px;
+    z-index: -1;
+}
+
+.hex4::after {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.hex4::before {
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+#stomuch {
+    float: right;
+}
+
+.name {
+    margin-right: 5px;
+    padding: 10px;
+    float: right;
+    margin-top: 300px;
+
+}
+

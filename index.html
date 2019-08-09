@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,42 +9,60 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+
 </head>
 <!-- <body background="https://www.eahsn.org/wp-content/uploads/AdobeStock_65704515.jpeg"> -->
+
 <body>
-    <div id="slide1">
+    <!-- <div id="slide1">
         <div class="jumbotron text-center">
             <h1>My Health Finder</h1>
             <p>Get best doctor's around you.</p>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6" offset-sm-1 style="background-color: rgb(176, 209, 223);">
-                <h2>Specialization: </h2><br>
-            <!-- <input type="text" name="Specialization" id="box1"> -->
-                    <textarea name="message" style="width:300px; height:50px;"></textarea><br>
+        </div> -->
+        <div class="container">
+            <div class="name">
+                <h1>My Health Finder</h1>
+                <h3>Get best doctor around you.</h3>
+                <ul class="w3-ul">
             </div>
-            <div class="col-sm-6" offset-sm-1 style="background-color: rgb(176, 209, 223);">
-                <div class="nam">
-                    <h2>Name: </h2><br>
-                    <textarea name="message" style="width:300px; height:50px;"></textarea><br>
-                <!-- <input type="text" name="Name"> -->
-                </div>
-            </div>
-        </div>
-    <div class="zippy">
-    <div class="jumbotron1 text-center">
-                <h2>Zip Code: </h2>
-                <textarea name="message" style="width:300px; height:50px;"></textarea><br>
+                <div class="hex1"></div><br><h2 id="toothach">Dentist</h2><br>
+                <div class="hex2"></div><br>
+                <h2 id="joints">Orthopadic</h2><br>
                 <br>
+                <div class="hex3"></div><br>
+                <h2 id="pimples">Dermatologist</h2><br>
+                <br>
+                <div class="hex4"></div>
+                <h2 id="stomuch">Gynacologist</h2><br>
             </div>
-        </div>
 
-            <div id="search">
-                <button type="button1" class="btn btn-info btn-lg btn-block">Search</button>
-            </div>
+        
+
+
+    <!-- <div class="col-sm-6" offset-sm-1> -->
+
+        <!-- <h2>Specialization: </h2><br> -->
+    <!-- </div> -->
+    <!-- <div class="col-sm-6" offset-sm-1 style="background-color: rgb(176, 209, 223);">
+        <div class="nam">
+            <h2>Name: </h2><br>
+            <textarea name="message" style="width:300px; height:50px;"></textarea><br>
+            <input type="text" name="Name">
+        </div>
     </div>
+    </div>
+    <div class="zippy">
+        <div class="jumbotron1 text-center">
+            <h2>Zip Code: </h2>
+            <textarea name="message" style="width:300px; height:50px;"></textarea><br>
+            <br>
+        </div>
+    </div> -->
+
+    <!-- <div id="search">
+            <button type="button1" class="btn btn-info btn-lg btn-block">Search</button>
+        </div>
+    </div> -->
 
     <div id="slide2" style="display:none">
         <div class="jumbotron2 text-center">
@@ -64,7 +83,31 @@
         <p>We will do google api here.</p>
     </div>
 
+    <!-- // google api -->
+
+    <div id="map"></div>
+    <script>
+
+        function initMap() {
+            var myLatLng = { lat: -25.363, lng: 131.044 };
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: myLatLng
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Hello World!'
+            });
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTD6b3qi2vE1inL73KWwYgmX0U8Ku4xu8&callback=initMap"></script>
+
     <script type="text/javascript" src="java.js"></script>
 
 </body>
+
 </html>
