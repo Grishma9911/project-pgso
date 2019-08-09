@@ -9,7 +9,19 @@
     padding: 5px; */
 /* 
 }
-
+.footer{
+    position: fixed;
+    color:whitesmoke#000;
+    background-color:rgb(176, 209, 223);
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    font-size:9px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 5px solid #262727;
+    border-bottom: 10px solid #262727;
+}
 
 .jumbotron2 {
     height: 300px;
@@ -136,13 +148,17 @@ textarea {
 
 
 body {
-    margin: 500px;
+    margin: 50px;
     padding: 20px;
     background-repeat: no-repeat;
     background-size: contain;
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 255, 255, 0.021);
+}
+
+#container {
+    padding: 10px;
 }
 
 /* h2 #toothache {
@@ -191,7 +207,7 @@ h2 #joints {
     content: "";
     position: absolute;
     top: 10;
-    left: 48.5px;
+    left: 30px;
     z-index: -1;
 }
 
@@ -246,7 +262,7 @@ h2 #joints {
     content: "";
     position: absolute;
     top: 10;
-    left: 48.5px;
+    left: 30px;
     z-index: -1;
 }
 
@@ -301,7 +317,7 @@ h2 #joints {
     content: "";
     position: absolute;
     top: 10;
-    left: 48.5px;
+    left: 30px;
     z-index: -1;
 }
 
@@ -360,7 +376,7 @@ h2 #joints {
     content: "";
     position: absolute;
     top: 100;
-    right: 48.5px;
+    right: 30px;
     z-index: -1;
 }
 
