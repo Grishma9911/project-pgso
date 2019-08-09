@@ -1,63 +1,54 @@
-$(document).ready(function (){
+$(document).ready(function () {
 
-$("#button1").on("click", function() {
-    $("#slide2").show()
-    
-    getDocotorInfo();
-    console.log('im working')
+    $(".button1").on("click", function () {
+        $("#slide2").show()
+        // $("#slide1").hide()
+    });
 
-});
-var symptom1=$('#symptom').val();
-var symptom= response[i].data.specialties[0].name
-// $("#slide2").hide()
+    // $("#slide2").hide()
 
- function getDocotorInfo(){
 
-    var api_key = 'a6adddec4df7db9f9b37cd18dbb4a61e'; //GOT API key at developer.betterdoctor.com
-    var queryURL ='https://api.betterdoctor.com/2016-03-01/doctors?query='+ symptom +'location=40.730610,-73.935242,3&skip=2&limit=10&user_key='+ api_key;
-    
-    
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).then(function(response) {
-    console.log(response);
-    
-    
-  
-    var results= response.data;
-    console.log(results)
-
-      console.log(response.data.length);
-      
-
-    for (var i = 0; i < response.data.length; i++) {
-      
-      var docInfo=$('<div>');
-
-    
-
-      if( response.data[i].practices[0].name != "undefined" & response.data[i].practices[0].distance < 3 & symptom===symptom1){
-      var docStreet= response.data[i].practices[0].visit_address.street;
-      var docCity= response.data[i].practices[0].visit_address.city;
-      var docZip= response.data[i].practices[0].visit_address.zip;
-      
-
-      
-      console.log("data practices length num =" + i + " : " + response.data[i].practices.length)
-      console.log("name: " + response.data[i].practices[0].name);
-      console.log("address: " + response.data[i].practices[0].visit_address.street);
-      console.log(docStreet + docCity+ docZip);
-      docInfo.append(docName + "\n" + docStreet + docCity + docZip )
-      $('#slide2').append(docInfo);
-      $('#slide1').hide();
-      }
+    function getDocotorInfo() {
 
     }
-  });
 
-  }
+
 });
 
+// Get your API key at developer.betterdoctor.com
+var api_key = 'a6adddec4df7db9f9b37cd18dbb4a61e';
+var queryURL = 'https://api.betterdoctor.com/2016-03-01/doctors?location=40.730610,-73.935242,3&skip=2&limit=5&user_key=' + api_key;
+
+$.ajax({
+    url: queryURL,
+    method: "GET"
+}).then(function (response) {
+    console.log(response);
+    
+
+
+    // Constructing HTML containing the doctor's profile
+    var docPic = $("<img>").attr("src", response.data[0].profile.image_url);
+    var docName = $("<p>").text(response.data[0].profile.first_name + " " + response.data[0].profile.last_name + ", " + response.data[0].profile.title);
+    var docGender = $("<p>").text(response.data[0].profile.gender);
+    var docSpecial = $("<p>").text(response.data[0].specialties[0].name); 
+    var docBio = $("<p>").text(response.data[0].profile.bio);  
+    var docLoc = $("<p>").text(response.data[0].practices[0].visit_address.city + ", " + response.data[0].practices[0].visit_address.state);
+    var docLandline = $("<p>").text(response.data[0].practices[0].phones[0].number);  
+
+
+    // var docURL = $("<a>").attr("href", response.url).append(artistName);
+    // var docImage = $("<img>").attr("src", response.thumb_url);
+
+    $("#results-div").empty();
+    $("#results-div").append(docPic);
+    $("#results-div").append(docLoc);
+    $("#results-div").append(docSpecial);
+    $("#results-div").append(docName);
+    $("#results-div").append(docGender);
+    $("#results-div").append(docBio);
+    $("#results-div").append(docLandline);
+
+});
 
 
