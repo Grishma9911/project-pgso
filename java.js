@@ -5,7 +5,7 @@ $("#button1").on("click", function() {
     
     getDocotorInfo();
     console.log('im working')
-  
+
 });
 var symptom1=$('#symptom').val();
 var symptom= response[i].data.specialties[0].name
@@ -57,5 +57,7 @@ var symptom= response[i].data.specialties[0].name
   });
 
   }
-
 });
+
+
+

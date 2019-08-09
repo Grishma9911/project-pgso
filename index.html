@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>healthFinder</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="java.js"></script>
+    <script type="text/javascript" src="java.js"></script>    
 </head>
 </head>
 <!-- <body background="https://www.eahsn.org/wp-content/uploads/AdobeStock_65704515.jpeg"> -->
@@ -27,7 +29,18 @@
             <input type="text" name="Zip Code"><br>
             <br>
             <button type="button" id="button1" class="btn btn-success">Search</button>
+
         </div>
+
+        <h2>Specialization: </h2><br>
+        <input type="text" name="query" value="gimme a symptom">
+        <h2>Name: </h2><br>
+        <input type="text" name="location" value="gimme your location">
+        <h2>Zip Code: </h2><br>
+        <input type="text" name="gender" value="male or female"><br>
+        <br>
+        <button type="button1" class="btn btn-success">Search</button>
+    </div>
 
     <div id="slide2" style="display:none">
         <div class="jumbotron text-center">
@@ -37,7 +50,27 @@
         <button type="button2" class="btn btn-success">Search</button>
     </div>
 
+    <div id="results-div"></div>
+    <div id="map"></div>
+  <script>
+
+    function initMap() {
+      var myLatLng = { lat: -25.363, lng: 131.044 };
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: myLatLng
+      });
+
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Hello World!'
+      });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTD6b3qi2vE1inL73KWwYgmX0U8Ku4xu8&callback=initMap"></script>
+
 </body>
+
 </html>
-
-
