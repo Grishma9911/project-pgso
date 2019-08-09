@@ -24,7 +24,7 @@ $.ajax({
     method: "GET"
 }).then(function (response) {
     console.log(response);
-    console.log(response.data[0].profile)
+    
 
 
     // Constructing HTML containing the doctor's profile
