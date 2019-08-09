@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(document).ready(function() {
 
     $("#search").on("click", function() {
@@ -19,3 +20,6 @@ $("#search2").on("click", function() {
 });
 
 $("#slide2").hide()
+=======
+
+>>>>>>> prashanti

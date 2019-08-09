@@ -6,14 +6,34 @@ body {
     background-image: url(https://www.eahsn.org/wp-content/uploads/AdobeStock_65704515.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+<<<<<<< HEAD
     height: 400px;
+=======
+    height: 200px;
+>>>>>>> prashanti
     text-shadow: black 0.3em 0.3em 0.3em;
     font: 100px;
     /* margin: 10px;
     padding: 5px; */
 
 }
+<<<<<<< HEAD
 
+=======
+.footer{
+    position: fixed;
+    color:whitesmoke#000;
+    background-color:rgb(176, 209, 223);
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    font-size:9px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 5px solid #262727;
+    border-bottom: 10px solid #262727;
+}
+>>>>>>> prashanti
 
 .jumbotron2 {
     height: 300px;
