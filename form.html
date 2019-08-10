@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Testing: HealthFinder Application</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assests/js/app.js"></script>
+  <script type="text/javascript" src="assests/css/style.css"></script>
+
+</head>
+</head>
+
+<body>
+  <div>
+    <input type="text" id="symptom" placeholder="Enter a symptom">
+    <input type="text" id="zip_code" placeholder="Enter a zip code">
+    <button type="button" id="button">Search</button><br /><br />
+  </div>
+
+  <div id="floating-panel">
+    <input id="latlng" type="text" value="40.714224,-73.961452">
+    <input id="submit" type="button" value="Reverse Geocode">
+  </div>
+
+
+  <!-- DIV below is used to display results, this will be placed on the results page -->
+  <div id="results-div"></div>
+
+
+
+
+  <!-- GOOGLE MAPS -->
+
+
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+    #map {
+      height: 500px;
+      width: 600px;
+
+    }
+
+    /* Optional: Makes the sample page fill the window. */
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #floating-panel {
+      position: absolute;
+      top: 10px;
+      left: 25%;
+      z-index: 5;
+      background-color: #fff;
+      padding: 5px;
+      border: 1px solid #999;
+      text-align: center;
+      font-family: 'Roboto', 'sans-serif';
+      line-height: 30px;
+      padding-left: 10px;
+    }
+
+    #floating-panel {
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      margin-left: -180px;
+      width: 350px;
+      z-index: 5;
+      background-color: #fff;
+      padding: 5px;
+      border: 1px solid #999;
+    }
+
+    #latlng {
+      width: 225px;
+    }
+  </style>
+  </head>
+
+  <body>
+    <!-- getElementById INSERTS GOOGLE MAPS HERE -->
+    <div id="map"></div>
+    <script type="text/javascript" src="assests/js/maps.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnIEyf9o8bPdvzlw-18aW_uXFFX93a5Uc&callback=initMap"></script> 
+  </body>
+
+</html>
