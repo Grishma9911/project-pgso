@@ -1,3 +1,14 @@
-node_modules/
 .vscode
+
+*.zip
+
+assests/
+node_modules/
 test/
+
+maps.html
+results.html
+form.html
+
+maps-api.js
+reset.css
