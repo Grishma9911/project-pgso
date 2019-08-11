@@ -7,11 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>healthFinder</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
-<body>
+<body background="https://blog.visme.co/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-08.jpg">
     <!-- <div id="slide1">
         <div class="jumbotron text-center">
             <h1>My Health Finder</h1>
@@ -20,8 +21,29 @@
         <div id="container">
             <div class="name">
                 <h1>My Health Finder</h1>
-                <h3>Get best doctor around you.</h3>
-                <ul class="w3-ul">
+                <h3>Get best doctor around you.</h3><br>
+                <br>
+                <div class="icon-preview">
+                        <button class="btn">
+                    <i class="material-icons dp48">add_location</i>
+                    </button>
+                </div>
+                <form>
+                    <input type="text" name="search" placeholder="Zip Code here...."><br>
+                    <br>
+                    <div class="search">
+                            <button class="btn">
+                        <i class="material-icons dp48">search</i></button>
+                    </div>
+                    <input type="text" name="search" placeholder="Symptoms here...."><br>
+                    <br>
+                  
+                    <div id="floating-panel">
+                        <input id="latlng" type="text" placeholder="40.714224,-73.961452">
+                        <input id="submit" type="button" value="Reverse Geocode">
+                      </div>
+                  
+                  </form>
             </div>
                 <div class="hex1"></div><br><h2 id="toothach">Dentist</h2><br>
                 <div class="hex2"></div><br>
@@ -33,40 +55,44 @@
                 <div class="hex4"></div>
                 <h2 id="stomuch">Gynacologist</h2><br>
             </div>
+           
+          
+              <!-- getElementById INSERTS GOOGLE MAPS HERE -->
+              <div id="map"></div>
+       
 
-        
 
-
-       <div class="zippy">
-        <div class="jumbotron1 text-center">
-            <h2>Zip Code: </h2>
-            <textarea name="message" style="width:300px; height:50px;"></textarea><br>
-            <br>
-        </div>
-    </div> -->
+      <!-- <div class="zippy">
+    //     <div class="jumbotron1 text-center">
+    //         <h2>Zip Code: </h2>
+    //         <textarea name="message" style="width:300px; height:50px;"></textarea><br>
+    //         <br>
+    //     </div>
+    // </div>  -->
 
   
 
-    <div id="slide2" style="display:none">
-        <div class="jumbotron2 text-center">
-            <h1>My Health Finder</h1>
-            <p>Get best doctor's around you.</p>
-        </div>
-        <p>Here we will do doctor's info storage.</p>
-        <div id="search2">
-            <button type="button2" class="btn btn-info btn-lg btn-block">Search</button>
-        </div>
-    </div>
+   <!-- <div id="slide2" style="display:none">
+    //     <div class="jumbotron2 text-center">
+    //         <h1>My Health Finder</h1>
+    //         <p>Get best doctor's around you.</p>
+    //     </div>
+    //     <p>Here we will do doctor's info storage.</p>
+    //     <div id="search2">
+    //         <button type="button2" class="btn btn-info btn-lg btn-block">Search</button>
+    //     </div>
+    // </div>
 
-    <div id="slide3" style="display: none">
-        <div class="jumbotron3 text-center">
-            <h1>My Health Finder</h1>
-            <p>Get best doctor's around you.</p>
-        </div>
-        <p>We will do google api here.</p>
-    </div>
+    // <div id="slide3" style="display: none">
+    //     <div class="jumbotron3 text-center">
+    //         <h1>My Health Finder</h1>
+    //         <p>Get best doctor's around you.</p>
+    //     </div>
+    //     <p>We will do google api here.</p>
+    // </div> -->
 
     <script type="text/javascript" src="java.js"></script>
+    
 
 
 
