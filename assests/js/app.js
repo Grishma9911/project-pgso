@@ -47,7 +47,7 @@ function initMap() {
       
       
               for (var i = 0; i < response.data.length; i++) {
-                $("#results-div").empty();
+                $("#artist-div").empty();
                 var docResults = $('#results-div');
       
                 if (response.data[i].practices[0].name != "undefined" && response.data[i].practices[0].distance < 5) {
@@ -63,7 +63,6 @@ function initMap() {
                   console.log("name: " + response.data[i].practices[0].name);
                   console.log("address: " + response.data[i].practices[0].visit_address.street);
                   console.log(docStreet + docCity + docZip);
-      
       
                   docResults.append(docSpec + '<br />' + docName + '<br />' + docStreet + '<br />' + docCity + ', ' + docZip + '<br /><br />');
       
