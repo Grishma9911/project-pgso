@@ -29,12 +29,12 @@ function initMap() {
       
           function getDocotorInfo() {
       
-            var symptom = $('#symptom').val().trim();
+            var specialties = $('#specialties').val().trim();
           
             var lng = pos.lng;
             var lat = pos.lat;
             var api_key = 'a6adddec4df7db9f9b37cd18dbb4a61e';
-            var queryURL = 'https://api.betterdoctor.com/2016-03-01/doctors?location=' + lat + ',' + lng + ',4&skip=2&limit=5&query=' + symptom + ' &user_key=' + api_key;
+            var queryURL = 'https://api.betterdoctor.com/2016-03-01/doctors?location=' + lat + ',' + lng + ',4&skip=2&limit=5&query=' + specialties + ' &user_key=' + api_key;
      
 
             $.ajax({
@@ -48,7 +48,7 @@ function initMap() {
       
       
               for (var i = 0; i < response.data.length; i++) {
-                $("#results-div").empty();
+                // $("#results-div").empty();
                 var docResults = $('#results-div');
       
                 if (response.data[i].practices[0].name != "undefined" && response.data[i].practices[0].distance < 5) {
