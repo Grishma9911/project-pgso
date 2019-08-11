@@ -14,7 +14,7 @@ function initMap() {
       };
       
       infoWindow.setPosition(pos);
-      infoWindow.setContent('We found your location. The search will populate phsycians within a 3 mile radius.');
+      infoWindow.setContent('We found your location. The search will populate phsycians within a 5 mile radius.');
       infoWindow.open(map);
       map.setCenter(pos);
 
@@ -47,7 +47,7 @@ function initMap() {
       
       
               for (var i = 0; i < response.data.length; i++) {
-                $("#artist-div").empty();
+                $("#results-div").empty();
                 var docResults = $('#results-div');
       
                 if (response.data[i].practices[0].name != "undefined" && response.data[i].practices[0].distance < 5) {
