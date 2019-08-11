@@ -42,16 +42,17 @@ function initMap() {
               method: "GET"
             }).then(function (response) {
       
-              // console.log(response);
+              console.log(response);
       
       
       
               for (var i = 0; i < response.data.length; i++) {
-      
+                $("#results-div").empty();
                 var docResults = $('#results-div');
       
                 if (response.data[i].practices[0].name != "undefined" && response.data[i].practices[0].distance < 5) {
                   //==============================[ defines variables for response data ]==============================//
+                  var docSpec = response.data[i].specialties[0].name;
                   var docName = response.data[i].practices[0].name;
                   var docStreet = response.data[i].practices[0].visit_address.street;
                   var docCity = response.data[i].practices[0].visit_address.city;
@@ -64,7 +65,7 @@ function initMap() {
                   console.log(docStreet + docCity + docZip);
       
       
-                  docResults.append(docName + '<br />' + docStreet + '<br />' + docCity + ', ' + docZip + '<br /><br />');
+                  docResults.append(docSpec + '<br />' + docName + '<br />' + docStreet + '<br />' + docCity + ', ' + docZip + '<br /><br />');
       
                 }
       

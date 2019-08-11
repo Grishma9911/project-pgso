@@ -3,9 +3,8 @@
 *.zip
 *.md
 
-node_modules/
-test/
 01/
+01/assets/
 maps-api/
 
 maps.html
