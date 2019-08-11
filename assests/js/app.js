@@ -43,6 +43,7 @@ function initMap() {
             }).then(function (response) {
       
               console.log(response);
+              
       
       
       
@@ -52,7 +53,7 @@ function initMap() {
       
                 if (response.data[i].practices[0].name != "undefined" && response.data[i].practices[0].distance < 5) {
                   //==============================[ defines variables for response data ]==============================//
-                  var docSpec = response.data[i].specialties[0].name;
+                  var docSpec = response.data[i].specialties[0].actor;
                   var docName = response.data[i].practices[0].name;
                   var docStreet = response.data[i].practices[0].visit_address.street;
                   var docCity = response.data[i].practices[0].visit_address.city;
