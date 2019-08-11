@@ -1,12 +1,14 @@
 .vscode
 
 *.zip
+*.md
 
 node_modules/
 test/
+01/
+maps-api/
 
 maps.html
 results.html
 
 maps-api.js
-reset.css
