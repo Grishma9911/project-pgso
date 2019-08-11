@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,27 +9,31 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+
 </head>
 <!-- <body background="https://www.eahsn.org/wp-content/uploads/AdobeStock_65704515.jpeg"> -->
-    <body>
+
+<body>
+    <!-- <div class="container"> -->
         <div id="slide1">
             <div class="jumbotron text-center">
-                <h1>My Health Finder</h1>
-                <p>Get best doctor's around you.</p>
+                <h2>My Health Finder</h2>
+                <p><b>Get best doctor's around you.</b></p>
             </div>
-            
-            <h2>Specialization: </h2><br>
+
+            <h3>Specialization: </h3><br>
             <input type="text" name="Specialization">
-            <h2>Name: </h2><br>
+            <h3>Name: </h3><br>
             <input type="text" name="Name">
-            <h2>Zip Code: </h2><br>
+            <h3>Zip Code: </h3><br>
             <input type="text" name="Zip Code"><br>
             <br>
             <div id="search">
-                <button type="button1" class="btn btn-success">Search</button>
+                <button type="button1" class="btn btn-success" onclick="initMap()">Search</button>
+                <!-- <button type="submit" onclick="UserAction()">Search</button> -->
             </div>
         </div>
+    </div>
 
     <div id="slide2" style="display:none">
         <div class="jumbotron2 text-center">
@@ -51,6 +56,5 @@
     <script type="text/javascript" src="java.js"></script>
 
 </body>
+
 </html>
-
-

@@ -2,17 +2,28 @@
     background-image: url(https://www.eahsn.org/wp-content/uploads/AdobeStock_65704515.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 400px;
+    height: 250px;
+    width: 1264px;
+    margin: auto;
     text-shadow: black 0.3em 0.3em 0.3em;
-
+    
 }
 
 p {
-    font-size: xx-large;
+    font-size: x-large;
+    margin-left: 900px;
+    margin-top: 500px;
+    /* margin-bottom: 200px; */
 }
 
-h1 {
-    font-size: 100px;
+h2 {
+    margin-left: 900px;
+    color: rgba(23, 85, 85, 0.692);
+    /* margin-bottom: 300px; */
+}
+
+h3 {
+    margin-left: 150px;
 }
 
 .jumbotron2 {
@@ -21,6 +32,8 @@ h1 {
     text-shadow: black 0.3em 0.3em 0.3em;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 250px;
+    width: 1364px;
 }
 
 .jumbotron3 {
@@ -29,4 +42,6 @@ h1 {
     text-shadow: black 0.3em 0.3em 0.3em;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 250px;
+    width: 1364px;
 }
