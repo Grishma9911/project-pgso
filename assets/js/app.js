@@ -34,7 +34,7 @@ function initMap() {
             var lng = pos.lng;
             var lat = pos.lat;
             var api_key = 'a6adddec4df7db9f9b37cd18dbb4a61e';
-            var queryURL = 'https://api.betterdoctor.com/2016-03-01/doctors?location=' + lat + ',' + lng + ',25&skip=0&limit=10&query=' + specialties + ' &user_key=' + api_key;
+            var queryURL = 'https://api.betterdoctor.com/2016-03-01/doctors?location=' + lat + ',' + lng + ',25&skip=0&limit=5&query=' + specialties + ' &user_key=' + api_key;
      
 
             $.ajax({
