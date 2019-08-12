@@ -97,3 +97,28 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.open(map);
 }
 
+var api_key = 'a6adddec4df7db9f9b37cd18dbb4a61e';
+var queryURL = 'https://api.betterdoctor.com/2016-03-01/conditions?user_key=' + api_key;
+
+$.ajax({
+    url: queryURL,
+    method: "GET"
+}).then(function (response) {
+
+    console.log(response);
+
+    for (var i = 0; i < response.data.length; i++) {
+        // $("#conditions-div").empty();
+        // var conditions = $('#conditions-div');
+
+        // conditions.append(response.data[i].name);
+    }
+
+    $(document).ready(function () {
+        var conditions = $('select');
+        for (var i = 0; i < response.data.length; i++) {
+            conditions.append('<option value="' + response.data[i].name + '">' + response.data[i].name + '</option>');
+        }
+    });
+});
+
