@@ -55,15 +55,20 @@ function initMap() {
                   var docStreet = response.data[i].practices[0].visit_address.street;
                   var docCity = response.data[i].practices[0].visit_address.city;
                   var docZip = response.data[i].practices[0].visit_address.zip;
+                  var docImage = response.data[i].profile.image_url;
+                  // var docPic = $("<img>").attr("src", docImage)
+                  
       
                   //=======================================[ console logs ]==========================================//
                   // console.log("data practices length num =" + i + " : " + response.data[i].practices.length)
-                  console.log("name: " + response.data[i].practices[0].name);
-                  console.log("address: " + response.data[i].practices[0].visit_address.street);
-                  console.log(docStreet + docCity + docZip);
-      
-                  docResults.append(docSpec + '<br />' + docName + '<br />' + docStreet + '<br />' + docCity + ', ' + docZip + '<br /><br />');
-      
+                  // console.log("name: " + response.data[i].practices[0].name);
+                  // console.log("address: " + response.data[i].practices[0].visit_address.street);
+                  // console.log(docStreet + docCity + docZip)
+                  
+
+                  //=======================================[ constructing html ]==========================================//
+
+                  docResults.append('<img src='+ docImage +'></img>' + '<br />' + docSpec + '<br />' + docName + '<br />' + docStreet + '<br />' + docCity + ', ' + docZip + '<br /><br />');
                 }
                 
               }
@@ -119,4 +124,3 @@ $.ajax({
         }
     });
 });
-
