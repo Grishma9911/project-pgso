@@ -14,7 +14,7 @@ function initMap() {
       };
       
       infoWindow.setPosition(pos);
-      infoWindow.setContent('We found your location. The search will populate phsycians within a 5 mile radius.');
+      infoWindow.setContent('We found your location. The search will populate phsycians within a 25 mile radius.');
       infoWindow.open(map);
       map.setCenter(pos);
 
