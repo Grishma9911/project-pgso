@@ -24,7 +24,7 @@ function initMap() {
 
         $("#button").on("click", function () {
           $("#slide2").show()
-
+          $("#results-div").empty();
           getDocotorInfo();
       
           function getDocotorInfo() {
@@ -34,7 +34,7 @@ function initMap() {
             var lng = pos.lng;
             var lat = pos.lat;
             var api_key = 'a6adddec4df7db9f9b37cd18dbb4a61e';
-            var queryURL = 'https://api.betterdoctor.com/2016-03-01/doctors?location=' + lat + ',' + lng + ',4&skip=2&limit=5&query=' + specialties + ' &user_key=' + api_key;
+            var queryURL = 'https://api.betterdoctor.com/2016-03-01/doctors?location=' + lat + ',' + lng + ',25&skip=0&limit=10&query=' + specialties + ' &user_key=' + api_key;
      
 
             $.ajax({
@@ -44,14 +44,11 @@ function initMap() {
       
               console.log(response);
               
-      
-      
-      
               for (var i = 0; i < response.data.length; i++) {
-                // $("#results-div").empty();
+                
                 var docResults = $('#results-div');
       
-                if (response.data[i].practices[0].name != "undefined" && response.data[i].practices[0].distance < 5) {
+                if (response.data[i].practices[0].name != "undefined" && response.data[i].practices[0].distance < 25) {
                   //==============================[ defines variables for response data ]==============================//
                   var docSpec = response.data[i].specialties[0].actor;
                   var docName = response.data[i].practices[0].name;
@@ -68,8 +65,9 @@ function initMap() {
                   docResults.append(docSpec + '<br />' + docName + '<br />' + docStreet + '<br />' + docCity + ', ' + docZip + '<br /><br />');
       
                 }
-      
+                
               }
+               
             });
       
           }
