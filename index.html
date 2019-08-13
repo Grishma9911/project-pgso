@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Health Finder</title>
-
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-   
+    
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
  
-     
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/maps.js"></script> -->
+
+    <title>Health Finder</title>
    
 
 </head>
@@ -42,7 +44,7 @@
                 Improved Member Experience </p>
         
   
-           
+            
                 
            
         <div class="row">
@@ -50,27 +52,33 @@
 
                       <h2> Doctor Look Up </h2>
                     <br> 
-                    <form action="/action_page.php" method="post">
-                        <p>Looking for a specialty</p>
+                    <!-- <form action="/action_page.php" method="post">
+                        <p>Looking for specialty</p>
                         <input type="text" id="specialties" value=""  required>
         
                         <p>Enter Zip Code</p>
                         <input type="text" id="zip_code" value=""  required>
                         <button type="button" id="button">Search</button><br /><br />
+                              </form> -->
+
+
+                      <select id="specialties"></select>
+
+                      <button type="button" id="button">Search</button><br /><br />
         
-                      </form>
-           </div> 
+            </div> 
                            
-                            <div class="col-sm-3" offset-sm-1 >  
+                            <div class="col-sm-4" offset-sm-1 >  
                                 <h3>The List</h3>   
+                                <div id="images"></div>
                                 <div id="results-div"></div> 
                            </div>
         
 
             
-                           <div class="col-sm-3" offset-sm-1 >
+                           <div class="col-sm-5" offset-sm-1 >
                                <h3>Map</h3>
-                               <div id = "maps"></div>        
+                               <div id = "map"></div>        
                            </div>
           
         </div>
@@ -79,12 +87,11 @@
         <p>copy right©</p>
     </div>
 
-    <script type="text/javascript" src="assets/js/app.js"></script>
-
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTD6b3qi2vE1inL73KWwYgmX0U8Ku4xu8&callback=initMap">
     </script>
 
+    <!-- <script type="text/javascript" src="java.js"></script> -->
    
 
 
