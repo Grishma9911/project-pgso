@@ -17,7 +17,8 @@ function initMap() {
       infoWindow.setContent('We found your location. The search will populate phsycians within a 25 mile radius.');
       infoWindow.open(map);
       map.setCenter(pos);
-
+      
+      console.log(pos)
 
       $(document).ready(function () {
 
