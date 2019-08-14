@@ -1,26 +1,14 @@
-<<<<<<< HEAD
-body {
-    margin: 10px;
-    padding: 5px;
-}
-.jumbotron {
-=======
 * .jumbotron {
->>>>>>> master
     background-image: url(https://www.eahsn.org/wp-content/uploads/AdobeStock_65704515.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    
     height: 200px;
     text-shadow: black 0.3em 0.3em 0.3em;
-<<<<<<< HEAD
     font: 100px;
     /* margin: 10px;
     padding: 5px; */
 
-=======
-    font: 100px; 
- 
->>>>>>> master
 }
 .footer{
     position: fixed;
@@ -36,34 +24,6 @@ body {
     border-bottom: 5px solid #262727;
 }
 
-<<<<<<< HEAD
-/* .jumbotron2 {
-    height: 300px;
-    background-image: url(https://pulseprogram.com/wp-content/uploads/2016/09/bigstock-Medical-physician-doctor-hands-84629555-1024x341.jpg);
-    text-shadow: black 0.3em 0.3em 0.3em;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.jumbotron3 {
-    height: 300px;
-    background-image: url(https://www.eahsn.org/wp-content/uploads/AdobeStock_65704515.jpeg);
-    text-shadow: black 0.3em 0.3em 0.3em;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-/* 
-#slide3 {
-    background-image: url(https://image.freepik.com/free-vector/medical-crosses-background_23-2147490186.jpg); */
-/* } */
-
-/* .nam {
-    text-align: center; 
-
-}
-=======
-
->>>>>>> master
 
 
 .col-sm-6 {
@@ -76,33 +36,6 @@ body {
 textarea {
     text-align: center;
     }
-<<<<<<< HEAD
-
-.zippy {
-    padding: 20px 20px 20px 5px;
-    margin: 30px auto;
-    background-color:  rgb(176, 209, 223);
-    width: 700px;
-}
-
-#btn-info {
-    box-align: center;
-    width: 150px;
-    border-radius: 30px;
-}
-
-#search {
-    padding: 5px;
-    margin: auto;
-    width: 900px;
-}
-
-#search2 {
-    padding: 5px;
-    margin: auto;
-    width: 900px;
-} */
-=======
     
     
    
@@ -114,8 +47,21 @@ textarea {
 }
 
 
+.footer{
+    position: fixed;
+    color:whitesmoke#000;
+    background-color:rgb(176, 209, 223);
+    padding: 8px 8px 8px 8px;
+    text-align: center;
+    font-size:9px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 5px solid #262727;
+    border-bottom: 5px solid #262727;
+}
+
    
->>>>>>> master
 
 
      
@@ -125,8 +71,4 @@ textarea {
 #tabs25 ul li{display:block;float:left;margin:0 1px 0 0;}
 #tabs25 ul li a{display:block;float:left;color:rgb(22, 28, 31);text-decoration:none;padding:14px 22px 0 22px;height:28px;}
 
-<<<<<<< HEAD
 /* ---------------------- END Blueslate nav ---------------------- */
-=======
-/* ---------------------- END Blueslate nav ---------------------- */
->>>>>>> master

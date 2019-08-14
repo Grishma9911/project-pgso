@@ -13,7 +13,7 @@ function initMap() {
       };
       
       infoWindow.setPosition(pos);
-      infoWindow.setContent('We found your location. The search will populate phsycians within a 25 mile radius.');
+      infoWindow.setContent('We found your location. The search will populate phsycians within a 10 mile radius.');
       infoWindow.open(map);
       map.setCenter(pos);
 
@@ -43,7 +43,7 @@ function initMap() {
                 
                 var docResults = $('#results-div');
       
-                if (response.data[i].practices[0].name != "undefined" && response.data[i].practices[0].distance < 25) {
+                if (response.data[i].practices[0].name != "undefined" && response.data[i].practices[0].distance < 10) {
                   //==============================[ defines variables for response data ]==============================//
                   var docSpec = response.data[i].specialties[0].actor;
                   var docName = response.data[i].practices[0].name;
@@ -92,27 +92,27 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.open(map);
 }
 
-var api_key = 'a6adddec4df7db9f9b37cd18dbb4a61e';
-var queryURL = 'https://api.betterdoctor.com/2016-03-01/conditions?user_key=' + api_key;
+// var api_key = 'a6adddec4df7db9f9b37cd18dbb4a61e';
+// var queryURL = 'https://api.betterdoctor.com/2016-03-01/conditions?user_key=' + api_key;
 
-$.ajax({
-    url: queryURL,
-    method: "GET"
-}).then(function (response) {
+// $.ajax({
+//     url: queryURL,
+//     method: "GET"
+// }).then(function (response) {
 
-  //  console.log(response);
+//   //  console.log(response);
 
-    for (var i = 0; i < response.data.length; i++) {
-        // $("#conditions-div").empty();
-        // var conditions = $('#conditions-div');
+//     for (var i = 0; i < response.data.length; i++) {
+//         // $("#conditions-div").empty();
+//         // var conditions = $('#conditions-div');
 
-        // conditions.append(response.data[i].name);
-    }
+//         // conditions.append(response.data[i].name);
+//     }
 
-    $(document).ready(function () {
-        var conditions = $('select');
-        for (var i = 0; i < response.data.length; i++) {
-            conditions.append('<option value="' + response.data[i].name + '">' + response.data[i].name + '</option>');
-        }
-    });
-});
+//     $(document).ready(function () {
+//         var conditions = $('select');
+//         for (var i = 0; i < response.data.length; i++) {
+//             conditions.append('<option value="' + response.data[i].name + '">' + response.data[i].name + '</option>');
+//         }
+//     });
+// });
