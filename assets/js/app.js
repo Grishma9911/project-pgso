@@ -95,8 +95,8 @@ function initMap() {
                   var docCity = response.data[i].practices[0].visit_address.city;
                   var docZip = response.data[i].practices[0].visit_address.zip;
                   var docImage = response.data[i].profile.image_url;
-                  var docMarklat = response.data[i].practices[0].lat;
-                  var docMarklng = response.data[i].practices[0].lon;
+                  var docMarklat = response.data[i].practices[0].visit_address.lat;
+                  var docMarklon = response.data[i].practices[0].visit_address.lon;
                   // var docCoords = response.data[i].practices[0].lon;
                   // var docPic = $("<img>").attr("src", docImage)
 
@@ -107,61 +107,121 @@ function initMap() {
                   // console.log("address: " + response.data[i].practices[0].visit_address.street);
                   // console.log(docStreet + docCity + docZip)
 
-                  console.log(docMarklng)
-                  console.log(docMarklat)
+                  // console.log(docMarklng)
+                  // console.log(docMarklat)
 
 
                   //=======================================[ constructing html ]==========================================//
 
                   docResults.append('<img src=' + docImage + '></img>' + '<br />' + docSpec + '<br />' + docName + '<br />' + docStreet + '<br />' + docCity + ', ' + docZip + '<br /><br />');
+                };
+              }
+                
+
+
+
+                //Array of markers
+                var docCoords = [
+                  {
+                    coords: { lat: docMarklat, lng: docMarklon },
+                    // content: '<h1>Lynn MA</h1>'
+                  },
+                ];
+
+                //Loop through markers
+                for (var i = 0; i < docCoords.length; i++) {
+                  //Add markers
+                  addMarker(docCoords[i]);
+                  console.log(docCoords)
                 }
 
-              }
-
-
-              //Array of markers
-              var docLoc = [
-                {
-                  coords: { lat: docMarklat, lng: docMarklng },
-                  // content: '<h1>Lynn MA</h1>'
-                }
-              ];
-
-              for (var i = 0; i < docLoc.length; i++) {
-
-                addMarker(docLoc[i])
-                console.log("this is the doctors coordinates " + docMarklat + docMarklng)
-
-              }
-              // Add markers function
-              function addMarker(props) {
-                var marker = new google.maps.Marker({
-                  position: props.coords,
-                  map: map
-                });
-
-                // Check content
-                if (props.content) {
-                  var infoWindow = new google.maps.InfoWindow({
-                    content: props.content
+                // Add markers function
+                function addMarker(props) {
+                  var marker = new google.maps.Marker({
+                    position: props.coords,
+                    map: map
                   });
 
-                  marker.addListener('click', function () {
-                    infoWindow.open(map, marker);
-                  });
+                  // Check content
+                  if (props.content) {
+                    var infoWindow = new google.maps.InfoWindow({
+                      content: props.content
+                    });
+
+                    marker.addListener('click', function () {
+                      infoWindow.open(map, marker);
+                    });
+                  }
                 }
-
-              };
-
-
-
-            });
+              });
+            
           }
-        });
-      });
-    });
+        })
+      })
+    })
   }
 }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+//               }
+//               //Array of markers
+//               var docLoc = [
+//                 {
+//                   coords: { lat: docMarklat, lng: docMarklon },
+//                   // content: '<h1>Lynn MA</h1>'
+//                 }
+//               ];
+
+//               for (var i = 0; i < docLoc[i].length; i++) {
+
+//                 addMarker(docLoc);
+//                 console.log(coords)
+//                 console.log("this is the doctors coordinates " + docLoc)
+
+//                 // console.log("this is the doctors coordinates " + docMarklat + docMarklng)
+//                 // console.log(JSON.stringify(docLoc))
+
+//               }
+//               // Add markers function
+//               function addMarker(props) {
+//                 var marker = new google.maps.Marker({
+//                   position: props.coords,
+//                   map: map
+//                 });
+
+//                 // Check content
+//                 if (props.content) {
+//                   var infoWindow = new google.maps.InfoWindow({
+//                     content: props.content
+//                   });
+
+//                   marker.addListener('click', function () {
+//                     infoWindow.open(map, marker);
+//                   });
+//                 }
+
+//               };
+//             });
+//           };
+//         });
+//       });
+//     });
+//   }
+// }
+
+
+
 
 
 
