@@ -5,69 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>healthFinder</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+ 
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/maps.js"></script> -->
+
+    <title>Health Finder</title>
+   
 
 </head>
 <body>
-    <!-- <div id="slide1">
+     <div id="slide1">
         <div class="jumbotron text-center">
             <h1>My Health Finder</h1>
-            <p>Get best doctor's around you.</p>
-        </div> -->
-        <div id="container">
-            <div class="name">
-                <h1>My Health Finder</h1>
-                <h3>Get best doctor around you.</h3>
-                <ul class="w3-ul">
-            </div>
-                <div class="hex1"></div><br><h2 id="toothach">Dentist</h2><br>
-                <div class="hex2"></div><br>
-                <h2 id="joints">Orthopadic</h2><br>
-                <br>
-                <div class="hex3"></div><br>
-                <h2 id="pimples">Dermatologist</h2><br>
-                <br>
-                <div class="hex4"></div>
-                <h2 id="stomuch">Gynacologist</h2><br>
-            </div>
+            <p>Get Best Doctors Around You.</p>
+       
+    
+    <div id="tabs25">
+            <a href="http://www.cssportal.com/css-menu-generator/"></a>
+        <ul>
+        <li><a href="#" title="css menus" class="current">Home</a></li>
+        <li><a href="#" title="css menus" class="AboutUs">About Us</a></li>
+        <li><a href="#" title="css menus" class="ContactUs">Contact Us</a></li>
+        </ul>
+    </div>
 
+</div>
+            
+         <h2>BetterDoctor</h2>
+          <p>   BetterDoctor delivers accurate provider directory data to ensure health plans, health systems, 
+                provider groups, and doctors are regulation-compliant and can provide patients with care they’re looking for.
+                BetterDoctor we want to create First Health Plan Platform to Ensure Network Adequacy, Provider Data Accuracy and 
+                Improved Member Experience </p>
+        
+  
+            
+                
+           
+        <div class="row">
+            <div class="col-sm-3" offset-sm-1 > 
+
+                      <h2> Doctor Look Up </h2>
+                    <br> 
+                    <!-- <form action="/action_page.php" method="post">
+                        <p>Looking for specialty</p>
+                        <input type="text" id="specialties" value=""  required>
+        
+                        <p>Enter Zip Code</p>
+                        <input type="text" id="zip_code" value=""  required>
+                        <button type="button" id="button">Search</button><br /><br />
+                              </form> -->
+
+
+                      <select id="specialties"></select>
+
+                      <button type="button" id="button">Search</button><br /><br />
+        
+            </div> 
+                           
+                            <div class="col-sm-4" offset-sm-1 >  
+                                <h3>The List</h3>   
+                                <div id="images"></div>
+                                <div id="results-div"></div> 
+                           </div>
         
 
-
-       <div class="zippy">
-        <div class="jumbotron1 text-center">
-            <h2>Zip Code: </h2>
-            <textarea name="message" style="width:300px; height:50px;"></textarea><br>
-            <br>
+            
+                           <div class="col-sm-5" offset-sm-1 >
+                               <h3>Map</h3>
+                               <div id = "map"></div>        
+                           </div>
+          
         </div>
-    </div> -->
 
-  
-
-    <div id="slide2" style="display:none">
-        <div class="jumbotron2 text-center">
-            <h1>My Health Finder</h1>
-            <p>Get best doctor's around you.</p>
-        </div>
-        <p>Here we will do doctor's info storage.</p>
-        <div id="search2">
-            <button type="button2" class="btn btn-info btn-lg btn-block">Search</button>
-        </div>
+    <div class="footer">
+        <p>copy right©</p>
     </div>
 
-    <div id="slide3" style="display: none">
-        <div class="jumbotron3 text-center">
-            <h1>My Health Finder</h1>
-            <p>Get best doctor's around you.</p>
-        </div>
-        <p>We will do google api here.</p>
-    </div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTD6b3qi2vE1inL73KWwYgmX0U8Ku4xu8&callback=initMap">
+    </script>
 
-    <script type="text/javascript" src="java.js"></script>
-
+    <!-- <script type="text/javascript" src="java.js"></script> -->
+   
 
 
 
