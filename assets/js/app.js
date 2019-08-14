@@ -5,10 +5,6 @@ function initMap() {
     zoom: 12
   });
   infoWindow = new google.maps.InfoWindow;
-<<<<<<< HEAD
-
-=======
->>>>>>> 7ba11ec26d5b0e63d163f81f644a67ee6a58d05a
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
       var pos = {
@@ -17,19 +13,6 @@ function initMap() {
       };
       
       infoWindow.setPosition(pos);
-<<<<<<< HEAD
-      infoWindow.setContent('We found your location. The search will populate phsycians within a 25 mile radius.');
-      infoWindow.open(map);
-      map.setCenter(pos);
-      
-      console.log(pos)
-
-      $(document).ready(function () {
-
-
-        $("#button").on("click", function () {
-          $("#slide2").show()
-=======
       infoWindow.setContent('We found your location. The search will populate phsycians within a 10 mile radius.');
       infoWindow.open(map);
       map.setCenter(pos);
@@ -37,7 +20,6 @@ function initMap() {
       $(document).ready(function () {
         $("#button").on("click", function () {
           $("#slide1").show()
->>>>>>> 7ba11ec26d5b0e63d163f81f644a67ee6a58d05a
           $("#results-div").empty();
           getDocotorInfo();
       
@@ -50,10 +32,6 @@ function initMap() {
             var api_key = 'a6adddec4df7db9f9b37cd18dbb4a61e';
             var queryURL = 'https://api.betterdoctor.com/2016-03-01/doctors?location=' + lat + ',' + lng + ',25&skip=0&limit=5&query=' + specialties + ' &user_key=' + api_key;
      
-<<<<<<< HEAD
-
-=======
->>>>>>> 7ba11ec26d5b0e63d163f81f644a67ee6a58d05a
             $.ajax({
               url: queryURL,
               method: "GET"
@@ -65,11 +43,7 @@ function initMap() {
                 
                 var docResults = $('#results-div');
       
-<<<<<<< HEAD
-                if (response.data[i].practices[0].name != "undefined" && response.data[i].practices[0].distance < 25) {
-=======
                 if (response.data[i].practices[0].name != "undefined" && response.data[i].practices[0].distance < 10) {
->>>>>>> 7ba11ec26d5b0e63d163f81f644a67ee6a58d05a
                   //==============================[ defines variables for response data ]==============================//
                   var docSpec = response.data[i].specialties[0].actor;
                   var docName = response.data[i].practices[0].name;
@@ -100,11 +74,6 @@ function initMap() {
       
         });
       });
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7ba11ec26d5b0e63d163f81f644a67ee6a58d05a
     }, function () {
       handleLocationError(true, infoWindow, map.getCenter());
     });
@@ -115,10 +84,6 @@ function initMap() {
     handleLocationError(false, infoWindow, map.getCenter());
   }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 7ba11ec26d5b0e63d163f81f644a67ee6a58d05a
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
   infoWindow.setContent(browserHasGeolocation ?
@@ -127,32 +92,6 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.open(map);
 }
 
-<<<<<<< HEAD
-var api_key = 'a6adddec4df7db9f9b37cd18dbb4a61e';
-var queryURL = 'https://api.betterdoctor.com/2016-03-01/conditions?user_key=' + api_key;
-
-$.ajax({
-    url: queryURL,
-    method: "GET"
-}).then(function (response) {
-
-    console.log(response);
-
-    for (var i = 0; i < response.data.length; i++) {
-        // $("#conditions-div").empty();
-        // var conditions = $('#conditions-div');
-
-        // conditions.append(response.data[i].name);
-    }
-
-    $(document).ready(function () {
-        var conditions = $('select');
-        for (var i = 0; i < response.data.length; i++) {
-            conditions.append('<option value="' + response.data[i].name + '">' + response.data[i].name + '</option>');
-        }
-    });
-});
-=======
 // var api_key = 'a6adddec4df7db9f9b37cd18dbb4a61e';
 // var queryURL = 'https://api.betterdoctor.com/2016-03-01/conditions?user_key=' + api_key;
 
@@ -177,4 +116,3 @@ $.ajax({
 //         }
 //     });
 // });
->>>>>>> 7ba11ec26d5b0e63d163f81f644a67ee6a58d05a
