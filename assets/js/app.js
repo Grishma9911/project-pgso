@@ -24,7 +24,7 @@ function initMap() {
   };
 
 
-  var map = new google.maps.Map(document.getElementById('map'), options);
+  var map = new google.maps.Map(document.getElementById('map'), options, resize);
   var infoWindow = new google.maps.InfoWindow;
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {

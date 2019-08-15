@@ -3,11 +3,6 @@
 *.zip
 *.md
 
-01/
-01/assets/
 maps-api/
 
 maps.html
-results.html
-
-maps-api.js
