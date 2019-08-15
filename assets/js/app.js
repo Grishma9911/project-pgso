@@ -65,6 +65,8 @@ function initMap() {
         $("#button").on("click", function () {
           $("#slide1").show()
           $("#results-div").empty();
+          // $("#map").html(deleteMarkers);
+
           getDocotorInfo();
 
           function getDocotorInfo() {
@@ -114,31 +116,26 @@ function initMap() {
 
                   //=======================================[ constructing html ]==========================================//
 
-                  docResults.append('<img src=' + docImage + '></img>' + '<br />' + docSpec + '<br />' + docName + '<br />' + docStreet + '<br />' + docCity + ', ' + docZip + '<br /><br />');
+                  docResults.append('<img src=' + docImage + '></img>' + '<br />' + docSpec + '<br />' + docName + '<br />' + docStreet + '<br />' + docCity + ', ' + docZip + '<br /><br />')
+
                 };
               }
 
+              //=======================================[ constructing maps markers and content ]==========================================//
 
-
-
-              //Array of markers
               var docCoords = [
                 {
                   coords: { lat: docMarklat, lng: docMarklon },
-                  // content: '<h1>Lynn MA</h1>'
                 },
               ];
 
               //Loop through markers
               for (var i = 0; i < docCoords.length; i++) {
-
                 //Add markers
                 addMarker(docCoords[i]);
-
-                console.log(docCoords)
+                console.log(docCoords);
 
               }
-
               // Add markers function
               function addMarker(props) {
                 var marker = new google.maps.Marker({
@@ -156,10 +153,25 @@ function initMap() {
                     infoWindow.open(map, marker);
                   });
                 }
+
               }
-              
-              
-            });
+
+
+
+              function deleteMarkers(props) {
+                var deleteMarkers = new google.maps.Marker({
+                  clearMarkers() {
+                    marker = []
+                  }
+                })
+
+              }
+              function clearMarkers() {
+                addMarker(null);
+              }
+
+            }
+            )
 
           }
         })
@@ -167,14 +179,6 @@ function initMap() {
     })
   }
 }
-
-
-
-
-
-
-
-
 
 
 
